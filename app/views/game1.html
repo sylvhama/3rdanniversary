@@ -1,0 +1,77 @@
+<div ng-include="'partials/_header.html'"></div>
+<div ng-include="'partials/_nav.html'"></div>
+<section class="event1 game1 lame">
+  <div class="row text-center">
+    <div class="large-12 columns">
+      <h1 class="main-title"><img src="/images/title.png" alt="Evasion Lucky 3 Years"></h1>
+      <h2 class="uppercase white-title">에바종 3주년 기념, 행운의 슬롯머신을 돌려 보세요!</h2>
+      <p>3번의 플레이 기회를 드립니다!</p>
+    </div>
+  </div>
+  <div class="wrap-full slot-table">
+    <div class="row text-center">
+      <div class="large-12 columns">
+        <div class="slot-machine">
+          <div class="slot-wrap">
+            <ul class="slot-column">
+              <li class="slot-row"><img src="/images/game1/icon-evasion.png" alt="Slot machine icon"></li>
+              <li class="slot-row"><img src="/images/game1/icon-starbucks.png" alt="Slot machine icon"></li>
+              <li class="slot-row"><img src="/images/game1/icon-dutyfree.png" alt="Slot machine icon"></li>
+              <li class="slot-row"><img src="/images/game1/icon-30000.png" alt="Slot machine icon"></li>
+              <li class="slot-row"><img src="/images/game1/icon-5000.png" alt="Slot machine icon"></li>
+              <li class="slot-row"><img src="/images/game1/icon-evasion.png" alt="Slot machine icon"></li>
+
+            </ul>
+          </div>
+          <div class="slot-wrap">
+            <ul class="slot-column">
+              <li class="slot-row"><img src="/images/game1/icon-evasion.png" alt="Slot machine icon"></li>
+              <li class="slot-row"><img src="/images/game1/icon-starbucks.png" alt="Slot machine icon"></li>
+              <li class="slot-row"><img src="/images/game1/icon-dutyfree.png" alt="Slot machine icon"></li>
+              <li class="slot-row"><img src="/images/game1/icon-30000.png" alt="Slot machine icon"></li>
+              <li class="slot-row"><img src="/images/game1/icon-5000.png" alt="Slot machine icon"></li>
+              <li class="slot-row"><img src="/images/game1/icon-evasion.png" alt="Slot machine icon"></li>
+            </ul>
+          </div>
+          <div class="slot-wrap">
+            <ul class="slot-column">
+              <li class="slot-row"><img src="/images/game1/icon-evasion.png" alt="Slot machine icon"></li>
+              <li class="slot-row"><img src="/images/game1/icon-starbucks.png" alt="Slot machine icon"></li>
+              <li class="slot-row"><img src="/images/game1/icon-dutyfree.png" alt="Slot machine icon"></li>
+              <li class="slot-row"><img src="/images/game1/icon-30000.png" alt="Slot machine icon"></li>
+              <li class="slot-row"><img src="/images/game1/icon-5000.png" alt="Slot machine icon"></li>
+              <li class="slot-row"><img src="/images/game1/icon-evasion.png" alt="Slot machine icon"></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div ng-include="'partials/_win.html'"></div>
+          <div class="row">
+            <div class="small-4 columns">
+              <div class="coin-1" ng-class="{'again1': hiddenCoin[0]}">
+                <div class="insertcoin" ng-click="play($event, 0)" ng-hide="hiddenCoin[0]"><img src="/images/game1/insertcoin.png" alt="Insert Coin"></div>
+                <a href="#" class="start-machine" ng-hide="hiddenCoin[0]" ng-click="play($event, 0)"><img src="/images/game1/coin.png" alt="Coin"></a>
+              </div>
+            </div>
+            <div class="small-4 columns">
+              <div class="coin-2" ng-class="{'again2': hiddenCoin[1]}">
+                <div class="insertcoin" ng-click="play($event, 1)" ng-show="!wait && !running && !won && hiddenCoin[0] && !hiddenCoin[1]"><img src="/images/game1/insertcoin.png" alt="Insert Coin"></div>
+                <a href="#" class="start-machine" ng-hide="hiddenCoin[1]" ng-click="play($event, 1)"><img src="/images/game1/coin.png" alt="Coin"></a>
+              </div>
+            </div>
+            <div class="small-4 columns">
+              <div class="coin-3" ng-class="{'again3': hiddenCoin[2]}">
+                <div class="insertcoin" ng-click="play($event, 2)" ng-show="!wait && !running && !won && hiddenCoin[0] && hiddenCoin[1] && !hiddenCoin[2]"><img src="/images/game1/insertcoin.png" alt="Insert Coin"></div>
+                <a href="#" class="start-machine" ng-hide="hiddenCoin[2]" ng-click="play($event, 2)"><img src="/images/game1/coin.png" alt="Coin"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="next"><a ng-show="!running && credits==0" class="my-btn uppercase" href="#/event1/share" lang="en">Next<span class="arrow"></span></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+<div ng-include="'partials/_prizes.html'"></div>
+<div ng-include="'partials/_terms.html'"></div>
+<div ng-include="'partials/_footer.html'"></div>

@@ -1,0 +1,48 @@
+//colors
+$color-white: #fff;
+$color-black: #000;
+$color-light-gray: #f5f5f5;
+$color-dark-gray: #333333;
+$color-blue1: #33cccc;
+$color-blue2: #1aaaaa;
+$color-blue3: #baeaea;
+$color-fushia: #ff0c67;
+$color-dark-fushia: #A71047;
+
+//useless (Evasion guidelines)
+$color-light-gray2: #CCCCCC;
+$color-medium-gray: #666666;
+$color-red1: #F15B47;
+$color-red2: #C0534F;
+$color-yellow: #FFF5C6;
+
+//fonts
+$fonts_ko: "Nanum Gothic", "나눔고딕", 'Malgun Gothic', 'Gulim', 'SimSun', 'Arial Unicode', Helvetica, sans-serif;
+$fonts_en: "proxima-nova-condensed",sans-serif;
+$fonts_ko_pen: 'Nanum Pen Script', serif;
+$base_font_size: 16px;
+
+//z-index
+$z-1: 1;
+$z-9: 9;
+$z-99: 99;
+$z-999: 999;
+$z-9999: 9999;
+
+
+//My mixins/fucntions
+
+@function my-trim-unit($val) {
+  @return $val / ($val * 0 + 1);
+}
+
+@function my-rem-calc($val) {
+  @return $val / my-trim-unit($base_font_size) * 1rem;
+}
+
+@mixin bg-cover() {
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  background-position: center;
+}

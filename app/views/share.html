@@ -1,0 +1,73 @@
+<div ng-include="'partials/_header.html'"></div>
+<div ng-include="'partials/_nav.html'"></div>
+<section class="share lame">
+  <div class="row text-center">
+    <div class="large-12 columns">
+      <h1 class="main-title"><img src="/images/title.png" alt="Evasion Lucky 3 Years"></h1>
+      <h2 class="white-title win-title" ng-show="won">축하합니다!</h2>
+    </div>
+  </div>
+  <section class="link10000 row text-center wrap-full">
+    <div class="blue-container wrap-700">
+      <p class="text-pen">
+        지금 에바종 회원가입하면 즉시 사용<br class="hide-for-small-only">
+        가능한 5000+5000원 더블 쿠폰 증정!
+      </p>
+      <p><a class="my-btn my-btn-fushia" href="http://www.evasion.co.kr?banner_code=NTRGRkYyRkExRTJBSUM=" tracker-type="click" tracker="5000+5000" target="_blank">회원가입하기</a></p>
+    </div>
+  </section>
+  <div class="row text-center">
+    <div class="large-12 columns">
+      <section class="won" ng-show="won">
+        <!--p class="event-logo"><img src="/images/minimachine.png" alt="Event 1 logo"></p-->
+        <div class="wrap-700">
+          <p><img src="/images/home/trophy.png" alt="Trophy"></p>
+          <p class="color-blue">당첨된 상품</p>
+          <div ng-include="'partials/_win.html'"></div>
+          <div class="code" ng-if="prizeToShow==7">
+            <p><strong>ÉVASION 5,000원 즉시할인 COUPON</strong></p>
+            <p class="uppercase value" ng-if="replayUrl == '/event1/game'">oijdowiqdklna</p>
+            <p class="uppercase value" ng-if="replayUrl != '/event1/game'">551E72751CE0BT</p>
+            <p>쿠폰코드를 에바종 홈페이지에 입력해 주시면  즉시 사용이 가능합니다.</p>
+          </div>
+        </div>
+      </section>
+      <section class="share-links wrap-700">
+        <p><img src="/images/share/share.png" alt="Share"></p>
+        <p class="text-pen color-fushia" ng-if="replayUrl == '/event1/game'" ng-hide="alreadyShared==1">
+          이벤트를 SNS에 공유하면 한번<br class="hide-for-small-only">
+          더 PLAY 할 수 있는 기회를 드립니다!
+        </p>
+        <p class="row">
+          <a tracker-type="share" tracker="facebook" class="share-icon" href="https://www.facebook.com/sharer/sharer.php?u={{shareInfos.urlfb}}" ng-click="updateShare()" target="_blank">
+            <img src="/images/share/share-fb.png" alt="Share Facebook">
+          </a>
+          <a tracker-type="share" tracker="twitter" class="share-icon" href="http://twitter.com/share?url={{shareInfos.urltwitter}}&text={{shareInfos.twitter}}" target="_blank" ng-click="updateShare()">
+            <img src="/images/share/share-twitter.png" alt="Share Twitter">
+          </a>
+          <br ng-if="media=='mobile'">
+          <a ng-if="media=='mobile'" id="kakaolink" class="share-icon share-kakao" href="#" share-kakao-msg="{{shareInfos.kakao}}"
+             share-kakao-url="{{shareInfos.urlkakao}}" share-kakao-btn="이벤트 바로가기" share-kakao-img="{{shareInfos.img}}">
+            <img src="/images/share/share-kakao.png" alt="Share Kakao">
+          </a>
+          <a ng-if="media=='mobile'" href="#" class="share-icon share-kstory" kstory-post="{{shareInfos.kstory.post}}" kstory-appid="{{shareInfos.urlkstory}}"
+             kstory-appname="{{shareInfos.kstory.appname}}" kstory-title="{{shareInfos.title}}" kstory-desc="" kstory-img="{{shareInfos.img}}">
+            <img src="/images/share/share-story.png" alt="Share Kakao Story">
+          </a>
+        </p>
+        <p><a class="my-btn uppercase" ng-href="#{{replayUrl}}" lang="en" ng-show="shareEvent">Play Again<span class="arrow"></span></a></p>
+      </section>
+      <div ng-if="replayUrl == '/event1/game'">
+        <h2 class="white-title last-title">간단한 댓글 이벤트!</h2>
+        <p>가장 가보고 싶은 호텔 고르고 숙박권 받기!</p>
+      </div>
+      <div ng-if="replayUrl != '/event1/game'">
+        <h2 class="white-title last-title" lang="en">Lucky 3 Years</h2>
+        <p>슬롯 머신 돌리고 숙박권 받기!</p>
+      </div>
+      <p><a class="my-btn my-btn-fushia uppercase" href="#" ng-href="#{{nextUrl}}" lang="en">{{nextEvent}}</a></p>
+    </div>
+  </div>
+</section>
+<div ng-include="'partials/_footer.html'"></div>
+

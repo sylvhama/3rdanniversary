@@ -1,0 +1,482 @@
+@import "vars";
+@import "foundation/settings";
+
+.column, .columns {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.lame {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.my-btn {
+  padding: 10px 20px;
+  max-width: 200px;
+
+  .arrow {
+    display: none;
+  }
+}
+
+.main-title {
+  margin: 0 0 50px 0;
+}
+
+.white-title {
+  font-size: 26px;
+  line-height: 33px;
+  @media #{$small-only} {
+    font-size: 21px;
+    line-height: 34px;
+  }
+}
+
+.text-pen {
+  font-size: 42px;
+  line-height: 42px;
+
+  @media #{$small-only} {
+    font-size: 34px;
+    line-height: 34px;
+  }
+}
+
+.main-header {
+  padding: 25px;
+  background-color: $color-black;
+
+  @media #{$small-only} {
+    padding-top: 40px;
+    .logout {
+      top: -15px;
+    }
+  }
+}
+
+.nav-link {
+  padding: 15px;
+}
+
+.nav-tab-list {
+  .nav-link {
+    padding: 20px;
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  li:first-child {
+    @media #{$small-only} {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.main-footer {
+  padding: 25px;
+
+  h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  p {
+    margin-bottom: 15px;
+    line-height: 18px;
+    font-size: 16px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+    line-height: 18px;
+    font-size: 14px;
+  }
+}
+
+.prizes {
+  padding-top: 70px !important;
+
+  .white-title {
+    margin: 30px 0 60px 0;
+  }
+
+  .prize-list {
+    li.columns {
+      padding: 16px;
+    }
+    .prize-winners {
+      padding: 5px;
+      font-size: 22px;
+      line-height: 28px;
+      strong {
+        font-size: 28px;
+      }
+    }
+    .prize-content {
+      padding: 5px;
+      min-height: 315px;
+      font-size: 17px;
+      line-height: 26px;
+
+      strong.color-blue {
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+.terms {
+  padding-top: 70px !important;
+
+  h2.color-fushia {
+    margin-bottom: 30px;
+    font-size: 22px;
+    line-height: 36px;
+  }
+
+  ul {
+    li {
+      font-size: 16px;
+      line-height: 36px;
+    }
+  }
+}
+
+.terms-page {
+  .wrap-700 {
+    padding: 40px;
+  }
+}
+
+.register {
+  .white-title {
+    margin-bottom: 40px;
+
+    & + p {
+      font-size: 20px;
+      line-height: 31px;
+
+      @media #{$small-only} {
+        font-size: 16px;
+        line-height: 34px;
+      }
+    }
+  }
+
+  form {
+    padding: 40px 20px 40px 20px;
+
+    .mini-lame {
+      margin-bottom: 35px;
+    }
+
+    .checkbox-container {
+      padding: 20px;
+    }
+
+    .my-btn {
+      max-width: 200px;
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}
+
+.home-header {
+  padding-bottom: 25px;
+}
+
+.home-evasion-articles {
+  @media #{$small-only} {
+    margin-bottom: 70px;
+  }
+
+  .white-title {
+    font-size: 42px;
+    line-height: 46px;
+
+    @media #{$small-only} {
+      font-size: 32px;
+      line-height: 34px;
+    }
+
+    & + p {
+      margin-bottom: 30px;
+      font-size: 20px;
+
+      @media #{$small-only} {
+        font-size: 16px;
+        line-height: 34px;
+      }
+    }
+  }
+
+  .article-content {
+    padding: 40px 10px;
+
+    h2.color-fushia {
+      font-size: 20px;
+      line-height: 27px;
+      margin: 30px 0 20px 0;
+    }
+
+    .underline-link {
+      margin-top: 20px;
+    }
+
+    @media #{$small-only} {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.home-events {
+  padding-bottom: 140px;
+
+  .text-pen {
+    margin-bottom: 30px;
+
+    & + p {
+      margin-bottom: 70px;
+      font-size: 26px;
+      line-height: 50px;
+
+      @media #{$small-only} {
+        font-size: 21px;
+        line-height: 34px;
+      }
+    }
+  }
+
+  .divider {
+    @media #{$small-only} {
+      margin-bottom: 70px;
+    }
+  }
+
+  .event-title {
+    padding: 10px;
+    max-width: 180px;
+  }
+
+  .event-logo {
+    margin: 40px 0 30px 0;
+  }
+
+  strong.uppercase {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .my-btn {
+    margin-top: 30px;
+    max-width: 180px;
+  }
+}
+
+.event1, .share, .event2 {
+  padding-bottom: 140px;
+
+  .event-logo {
+    margin: 20px 0 30px 0;
+  }
+
+  .my-btn {
+    margin: 40px auto 20px auto;
+    max-width: 300px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .bubble {
+    margin: 20px auto 0 auto;
+    padding: 20px;
+
+    .tuto-content {
+      padding: 10px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .columns:last-child {
+      .tuto-content {
+        @media #{$small-only} {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.game1 {
+  .slot-machine {
+    margin: 30px auto;
+  }
+
+  .coin-1, .coin-2, .coin-3, .again1, .again2, .again3 {
+    background: none;
+  }
+
+  .next {
+    padding: 40px 0 20px 0;
+  }
+}
+
+.event2 {
+
+  h2 + p {
+    font-size: 20px;
+    line-height: 28px;
+
+    @media #{$small-only} {
+      font-size: 16px;
+      line-height: 34px;
+    }
+  }
+
+  .selection {
+    padding: 50px 0;
+
+    .arrow {
+      @media #{$small-only} {
+        margin-bottom: 40px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 30px;
+    }
+    p strong {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    .my-btn {
+      padding: 20px;
+      max-width: 300px;
+      min-height: 80px;
+    }
+  }
+
+  .comment-wrap {
+    padding: 50px 0 70px 0;
+
+    .comment-list {
+      margin: 40px 0;
+
+      li {
+        padding: 40px;
+
+        @media #{$small-only} {
+          padding: 20px;
+        }
+      }
+    }
+  }
+
+  form {
+    p.text-right {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+.share {
+  .event-logo {
+    margin-bottom: 15px;
+  }
+  .win-title, .last-title {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .last-title {
+    margin-top: 50px;
+
+    & + p {
+      font-size: 18px;
+      line-height: 24px;
+
+      @media #{$small-only} {
+        font-size: 16px;
+        line-height: 34px;
+      }
+    }
+  }
+
+  .won {
+    margin-bottom: 50px;
+    .wrap-700 {
+      padding: 16px;
+
+      .prize-won {
+        margin: 50px 0;
+
+      }
+
+      .code {
+        padding: 30px;
+
+        .value {
+          margin: 30px auto;
+          padding: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .share-links {
+    padding: 16px;
+
+    .text-pen.color-fushia {
+      margin-top: 40px;
+    }
+
+    p.row {
+      margin-top: 40px;
+    }
+
+    .share-icon {
+      margin: 15px;
+    }
+  }
+
+  .link10000 {
+
+    .blue-container {
+      padding: 30px;
+    }
+  }
+}
+
+.prize-won {
+
+  .prize-content {
+    padding: 5px;
+    width: 300px;
+    font-size: 17px;
+    line-height: 26px;
+
+    .prize-winners {
+      padding: 5px;
+      font-size: 22px;
+      line-height: 28px;
+    }
+
+    .prize-close {
+      padding: 10px;
+      width: 40px;
+      font-size: 22px;
+      line-height: 28px;
+    }
+
+    strong.color-blue {
+      font-size: 26px;
+    }
+  }
+}

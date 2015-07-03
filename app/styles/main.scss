@@ -1,0 +1,132 @@
+@import "../bower_components/foundation/scss/normalize";
+@import "foundation/settings";
+@import "compass/css3";
+@import "typography";
+@import "vars";
+
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  word-break: keep-all;
+  min-width: 300px;
+  height: auto;
+  font-family: $fonts_ko;
+  background-color: $color-light-gray;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, input, label, span {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-family: $fonts_ko;
+  color: $color-dark-gray;
+}
+
+p, input, label {
+  font-size: rem-calc(16);
+  line-height: rem-calc(21);
+}
+
+h1:lang(ko), h2:lang(ko), h3:lang(ko), h4:lang(ko), h5:lang(ko), h6:lang(ko), p:lang(ko), a:lang(ko), li:lang(ko), span:lang(ko), strong:lang(ko) {
+  font-family: $fonts_ko;
+}
+
+h1:lang(en), h2:lang(en), h3:lang(en), h4:lang(en), h5:lang(en), h6:lang(en), p:lang(en), a:lang(en), li:lang(en), span:lang(en), strong:lang(en) {
+  font-family: $fonts_en;
+}
+
+a:focus {
+  color: inherit;
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: inherit;
+    text-decoration: none !important;
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.ialic {
+  font-style: italic;
+}
+
+.no-margin {
+  margin:0;
+}
+
+.no-padding {
+  padding:0;
+}
+
+.clear:before,
+.clear:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clear:after {clear: both;}
+
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline !important;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.check-form {
+  .ng-invalid {
+    border-color: $color-fushia !important;
+    @include transition(border-color .25s ease);
+  }
+}
+
+.error {
+  color: $color-fushia !important;
+  font-size: rem-calc(16);
+  line-height: rem-calc(24);
+  opacity: 1;
+  @include transition(opacity .25s ease, line-height .25s ease);
+
+  &.ng-hide {
+    line-height: 0;
+    opacity: 0;
+  }
+}
+
+@import "3rd";
+@import "anim";

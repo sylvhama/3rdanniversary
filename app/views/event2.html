@@ -1,0 +1,75 @@
+<div ng-include="'partials/_header.html'"></div>
+<div ng-include="'partials/_nav.html'"></div>
+<section class="event2 lame">
+  <div class="row text-center">
+    <div class="large-12 columns">
+      <h1 class="main-title"><img src="/images/title.png" alt="Evasion Lucky 3 Years"></h1>
+      <h2 class="white-title">에바종 TOP<span class="color-fushia">10</span> 호텔 중 가장 가보고 싶은 곳은?</h2>
+      <p>
+        에바종에서 가장 인기가 높았던 10곳의 호텔을 보고 마음에 드는 장소를 댓글로 남겨주시면<br class="hide-for-small-only">
+        추첨을 통해 1등은 해당 호텔 2박 숙박권을 드리며,<br class="hide-for-small-only">
+        참여해주신 모든 분들께 바로 사용할 수 있는 5000원 쿠폰을 드립니다.
+      </p>
+      <p class="event-logo"><img src="/images/event2/top10.png" alt="Event 2 logo"></p>
+    </div>
+  </div>
+
+  <div ng-show="e2Ready">
+    <div class="wrap-ful myowl-container" ng-click="owlTouched=true" ng-swipe-right="swipeOwlRight()" ng-swipe-left="swipeOwlLeft()">
+      <div class="my-owl text-center"></div>
+      <div ng-if="media=='mobile'" ng-hide="owlTouched" class="swipe text-center">
+        <p><strong>밀어서 보기</strong></p>
+        <p><img src="/images/swipe.png" alt="Swipe"></p>
+      </div>
+    </div>
+
+    <div class="wrap-full selection">
+      <div class="row text-center">
+        <div class="large-3 medium-6 small-6 columns text-left" ng-hide="media=='mobile'">
+          <p class="arrow" ng-show="!selected"><a href="#" class="owl-prev"><img src="/images/event2/prev.png" alt="Previous"></a></p>
+        </div>
+        <div class="large-3 large-push-6 medium-6 small-6 columns text-right" ng-hide="media=='mobile'">
+          <p class="arrow" ng-show="!selected"><a href="#" class="owl-next"><img src="/images/event2/next.png" alt="Next"></a></p>
+        </div>
+        <div class="large-6 large-pull-3 medium-12 small-12 columns">
+          <p><a class="underline-link" ng-href="{{hotelUrl}}" target="_blank" tracker-type="hotel" tracker="{{hotelEn}}"><strong>{{hotelKr}}</strong></a></p>
+          <p>{{hotelLocation}}</p>
+          <p><a ng-class="{'btn-active': selected}" class="my-btn my-btn-trans select-it" href="#" ng-click="selectHotel($event)"><span><img src="/images/event2/check.png" alt="Check"></span> 나의 선택</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap-full comment-wrap">
+    <div class="row text-center">
+      <div class="large-12 columns">
+        <div ng-show="!selected">
+          <p class="text-pen color-fushia">
+            <span class="pink-arrow"><img src="/images/event2/pink-arrow.png" alt="Arrow"></span> 가장 가보고 싶은 에바종 호텔을 고르고 댓글로 공유해주세요!
+          </p>
+          <ul class="comment-list text-left">
+            <li ng-repeat="comment in comments | limitTo:10 | orderBy:'-created_at'" class="row">
+              <span class="medium-3 small-12 columns color-blue comment-name">{{comment.name}}</span>
+              <span class="medium-3 small-12 columns comment-date">{{comment.name_kr}}</span>
+              <span class="medium-6 small-12 columns comment-text">{{comment.comment}}</span>
+            </li>
+          </ul>
+        </div>
+        <form ng-show="selected" novalidate ng-class="{'check-form': checkComment}" class="placeholder" role="form" name="myFormComment" ng-submit="comment($event)">
+          <div class="my-form-comment row">
+            <div class="large-8 large-centered columns">
+              <p class="text-right" ng-class="{'error': getCommentLength()>50}">{{getCommentLength()}}/50</p>
+              <input id="inputComment" type="text" name="inputComment" ng-model="fields.comment" ng-maxlength="50" required ng-trim="true" placeholder="최대 50자까지 작성이 가능합니다." autocomplete="off">
+            </div>
+            <div class="large-12 columns text-center">
+              <button class="my-btn" type="submit">등록하기</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div ng-include="'partials/_prizes2.html'"></div>
+  <div ng-include="'partials/_terms.html'"></div>
+</section>
+<div ng-include="'partials/_footer.html'"></div>
